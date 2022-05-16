@@ -5,7 +5,12 @@
 @import 'math';
 
 $contrast-warnings: true !default;
-
+$primary-color: null;
+$secondary-color: null;
+$success-color: null;
+$warning-color: null;
+$alert-color: null;
+$-zf-size: null;
 ////
 /// @group functions
 ////
@@ -111,12 +116,6 @@ $contrast-warnings: true !default;
 
 /// Transfers the colors in the `$foundation-palette` map into variables, such as `$primary-color` and `$secondary-color`. Call this mixin below the Global section of your settings file to properly migrate your codebase.
 @mixin add-foundation-colors() {
-  $primary-color: null;
-  $secondary-color: null;
-  $success-color: null;
-  $warning-color: null;
-  $alert-color: null;
-  $-zf-size: null;
 
   @if map-has-key($foundation-palette, primary) {
     $primary-color: map-get($foundation-palette, primary) !global;
